@@ -1,0 +1,173 @@
+@import url(/styles/reset.css);
+@import url(/styles/navGeneral.css);
+@import url(/styles/footerStyle.css);
+
+
+
+main {
+    background-color: #eae5d9;
+    display: flex;
+    align-items: center;
+    padding: 200px 80px 85px 90px;
+}
+/*Sección de presentación*/
+#presentacion h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #72401E;
+}
+
+#presentacion p {
+    font-size: 20px;
+}
+
+#redes {
+    padding-top: 50px;
+}
+
+#redes a {
+    text-decoration: none;
+    color: #72401E;
+    font-weight: 500;
+}
+
+.redSocial {
+    padding-bottom: 6px;
+}
+
+.imgRedes {
+    height: 20px;
+    padding-right: 10px;
+    opacity: 0.5;
+}
+
+#sectionMetz {
+    padding-left: 80px;
+}
+
+#imgMetz {
+    width: 350px;
+    border-radius: 300px;
+}
+
+
+/*Sección: Sobre mi*/
+#sobreMi {
+    padding: 80px 100px 100px 100px;
+}
+
+#sobreMi h3{
+    font-weight: 550;
+    font-size: 43px;
+    color: #eae5d9;
+}
+
+#sobreMi p{
+    font-size: 23px;
+    font-weight: 300;
+}
+
+#sobreMi a{
+    color: #eae5d9;
+    font-weight: 400;
+}
+
+/*Sección skills*/
+#skills {
+    background-color: #eae5d9;
+    height: 250px;
+    padding: 80px 20px 30px 20px;
+
+}
+
+#skills h3 {
+    font-weight: 550;
+    font-size: 43px;
+    color: #72401E;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#skills ul {
+    display: flex;
+    gap: 40px;
+    justify-content: center;    
+}
+
+#skills li{
+    background-color: rgb(255, 251, 248);
+    width: 120px;
+    height: 130px;
+    border-radius:30%;
+}
+
+.imgSkills {
+    padding-left: 43px;
+    padding-top: 40px;
+}
+
+#skills li p {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+
+/*Sección formacion*/
+#formacion {
+    background-color: #eae5d9;
+    height: 390px;
+    padding: 50px 20px 20px 20px;
+}
+
+#formacion h3 {
+    font-weight: 550;
+    font-size: 43px;
+    color: #72401E;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#formacion ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;   
+    text-align: center;
+    align-items: center;
+}
+
+#formacion li{
+    background-color: rgb(255, 251, 248);
+    width: 220px;
+    height: 230px;
+    border-radius:10%;
+}
+
+#formacion img {
+    padding-top: 30px;
+}
+
+.imgFormacion {
+    width: 100px;
+}
+
+#imgoogle {
+    height: 40px;
+    margin: 20px;    
+}
+
+#imgUNAM {
+    height: 80px;
+}
+
+#imgOracle {
+    margin: 20px;
+}
+
+#formacion h4 {
+    padding: 10px 20px 10px 20px;
+    font-weight: 500;
+}
+
+/*Sección proyectos Recientes*/
+

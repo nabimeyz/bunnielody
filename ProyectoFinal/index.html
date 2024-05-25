@@ -1,0 +1,147 @@
+<!--Metztli Huertero Granada, Proyecto final Sitios web con transacciones en linea-->
+
+<!--metadatos-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  maximum-scale=1.0, user-scalable=no">
+    <!--Titulo e icono de barra de navegación-->
+    <title>Bunnielody - Inicio</title>
+    <link rel="icon" href="/imagenes/conejito.png" type="image/x-icon">
+
+    <!--enlaces a hojas de estilo-->
+    <link rel="stylesheet" href="/styles/homeStyle.css">
+
+    <!--Importación de fuentes externas: tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!--importación de elementos para funcionamiento del carrusel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--Vinculo archivos JS:-->
+    <script src="/carrusel.js" defer></script>
+</head>
+    
+
+<!--inicio del body-->
+<body>
+    
+<!--inicio header-->
+    <header>
+        <!--div que encasula el menu de navegacion-->
+        <div class="navegacion">
+            <a href="/index.html"><h1><img id="logoHeader" src="/imagenes/logo.png" alt="logo de la página"></h1></a>
+        <!--Barra de navegación-->
+            <nav>
+                <ul>
+                    <li><a href="/bts/bts.html">BTS</a></li>
+                    <li><a href="nj/newJeans.html">NewJeans</a></li>
+                    <li><a href="txt/tubatu.html">TXT</a></li>
+                    <li><a href="quienesSomos/quienesSomos.html">Nuestra Historia</a></li>
+                    <li>Carrito (0)</li>
+                </ul>
+            </nav> 
+        </div>        
+    </header>
+
+    <main>
+        <div id="bienvenida">
+            <h2>¡Bienvenido a <strong>Bunnielody</strong>!</h2> <br>
+            <p>¡Explora el mundo del K-pop con nuestra tienda online, donde encontrarás los productos más populares de tus agrupaciones favoritas! Diseñada por una fan, pensada para fans como tú.</p>
+            <br><br>
+            <p id="gp">Estos son nuestros grupos consentidos:</p>
+        </div>
+
+
+    <!--Presentación de categorías madres en la página-->
+    <ul class="artistas">
+        <li class="liArtista">
+            <a href="bts/bts.html"> <img id="imgBTS" src="/imagenes/bts.jpeg" alt="BTS"> </a> 
+            <h2>BTS</h2>
+        </li>
+
+        <li class="liArtista">
+            <a href="nj/newJeans.html"> <img id="imgNJ" src="/imagenes/nj1.jpeg" alt="NJ"> </a>
+            <h2>NewJeans</h2>
+        </li>
+
+        <li class="liArtista">
+            <a href="txt/tubatu.html"> <img id="imgTXT" src="/imagenes/txt.jpeg" alt="TXT"> </a>
+            <h2>Tomorrow x Together</h2>
+        </li>
+    </ul>
+    </main>
+
+<!--Carrusel de productos principales-->
+    <section class="carruselProductos">
+        <div class="masVendido">
+            <h3>Productos más vendidos</h3>
+        </div>
+
+        <!--Estructura para el carrusel-->
+        <div class="wrapper">
+            <i id="izquierda" class="fa-solid fa-angle-left"></i>
+            <ul class="carrusel">
+                
+                <!--Primer elemento-->
+                <li class="tarjeta">
+                    <div class="imgTarjeta">
+                        <img src="/imagenes/btsCover1.jpeg" alt="Love Yourself: Answer" draggable="false">
+                        <h3>BTS - Love Yourself: Answer</h3>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </li>
+
+                <!--segundo elemento-->
+                <li class="tarjeta">
+                    <div class="imgTarjeta">
+                        <img src="/imagenes/njCover.jpeg" alt="NewJeans Get up" draggable="false">
+                        <h3>NewJeans- 2nd EP: "Get Up"</h3>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </li>
+
+                <!--tercer elemento-->
+                <li class="tarjeta">
+                    <div class="imgTarjeta">
+                        <img src="/imagenes/txtCover.jpeg" alt="minisode 2: Blue Hour" draggable="false">
+                        <h3>TXT: minisode 2: "Blue Hour"</h3>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </li>
+
+                <!--cuarto elemento-->
+                <li class="tarjeta">
+                    <div class="imgTarjeta">
+                        <img src="/imagenes/btsCover2.jpeg" alt="BTS map of the soul: 7" draggable="false">
+                        <h3>BTS - Map of the Soul: 7</h3>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </li>
+            </ul>
+            <i id="derecha" class="fa-solid fa-angle-right"></i>
+        </div>
+    </section>
+
+    <footer>
+        <section id="etiquetas">
+            <h4>Sitios de interés</h4> <br>
+            <ul id="sitiosInteres">
+                <a href="/index.html"><li>Inicio</li></a>
+                <a href="/sobreMi/sobreMi.html"><li>¿Quién creó el sitio?</li></a>
+                <a href=""><li>Contáctanos</li></a>
+                <a href=""><li>Métodos de pago</li></a>
+            </ul>
+        </section>
+    
+        <section id="logo">
+            <img src="/sobreMi/imagenes/logo.jpg" alt="logo">
+            <p>© 2024. Metztli Huertero Granada</p>
+        </section>
+    </footer>
+
+</body>
+</html>

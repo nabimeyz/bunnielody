@@ -1,0 +1,20 @@
+@import url(/styles/reset.css);
+@import url(/styles/navGeneral.css);
+@import url(/styles/footerStyle.css);
+
+main {
+    background-color: #eae5d9;
+    display: flex;
+    align-items: center;
+    padding: 200px 80px 85px 90px;
+}
+/*Sección de presentación*/
+#presentacionForm h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #72401E;
+}
+
+#presentacionForm p {
+    font-size: 17px;
+}

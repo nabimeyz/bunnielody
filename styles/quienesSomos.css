@@ -1,3 +1,104 @@
 @import url(/styles/reset.css);
 @import url(/styles/navGeneral.css);
 @import url(/styles/footerStyle.css);
+
+/*padding: top, left, bottom, right*/
+
+main {
+    background-color: black;
+    padding: 190px 50px 80px 70px;
+    display: flex;
+    align-items: center;
+}
+
+
+#presentacion h2 {
+    background: linear-gradient(to right, #72401E ,#fffdfc);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 50px;    
+}
+
+#presentacion p {
+    color: beige;
+    font-size: 20px;
+}
+
+#logoPresenta {
+    width: 200px;
+    padding: 20px 40px 20px 130px;
+}
+
+#segundoCuerpo {
+    background-color:rgb(201, 180, 157);
+}
+
+/*Seccion de mision y vision*/
+
+#misionvision {
+    padding: 10px 80px 60px 80px;
+    display: flex;
+    text-align: center;
+}
+
+#misionvision h2{
+    font-size: 25px;
+    font-weight: 550;
+}
+
+#misionvision p{
+    font-size: 17px;
+}
+
+.misvis{
+    width: 50%;
+    background-color:#eae5d9;
+    margin: 10px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 30px;
+}
+
+#sectionValores {
+    padding: 50px 70px 10px 70px;
+}
+
+#sectionValores h2 {
+    font-size: 30px;
+    font-weight: 550;
+}
+
+#valores {
+    display: flex;
+    height: 300px;
+    padding: 50px 10px 10px 10px;
+    justify-content: center;
+}
+
+#valores h3 {
+    font-size: 22px;
+    font-weight: 550;
+}
+
+#valores li{
+    justify-content: center;
+    text-align: center;
+    background-color: #eae5d9;
+    width: 25%;
+    height: 250px;
+    border-radius:10%;
+    margin: 10px;
+}
+
+#valores li p {
+    margin: 10px;
+}
+
+#valores img {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+
+
+

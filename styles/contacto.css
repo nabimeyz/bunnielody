@@ -8,18 +8,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
 
 main {
-    background-color: #eae5d9;
+    background-color: white;
     display: flex;
     align-items: center;
-    padding: 200px 80px 85px 90px;
+    padding: 180px 80px 50px 90px;
+    line-height: 1.2;
 }
 /*Sección de presentación*/
 #presentacionForm h2 {
     font-size: 40px;
     font-weight: 600;
-    color: #72401E;
+    color: #2e190b;
 }
 
 #presentacionForm p {
     font-size: 17px;
+}
+
+#imgpregunta{
+    width: 300px;
+    padding-left: 180px;
+    padding-right: 50px;
+}
+#formulario{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    padding: 30px;
+    margin: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+label {
+    display:inline-flex;
+    margin-bottom: 5px;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#boton {
+    padding-top: 200px;
+
+}
+
+button {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+
+
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#formulario h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.form-group label{
+    font-family: 'Red Hat Display', sans-serif;
 }

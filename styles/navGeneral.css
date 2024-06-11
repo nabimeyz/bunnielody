@@ -1,56 +1,57 @@
-/*Formato general que incluye el diseño del nav*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
 
-* {
-    font-family: 'Montserrat', sans-serif;
+a {
+    font-family: 'Plus Jakarta Sans', sans-serif; 
 }
 
-body {
-    background-color: #a69384;
-    font-family: 'League Spartan', sans-serif;
+p {
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 header {
     display: flex;
-    background-color: #ffffff;
     width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    padding: 8px;
     position: fixed;
-}
-
-#logoHeader {
-    width: 250px;
-}
-
-.navegacion {
-    width: 1200px;
-    position: relative;
-    margin: 0 auto;
+    z-index: 1000;
 }
 
 nav {
-    position: absolute;
-    top: 60px;
-    right: 10px;
+    margin-right: 20px;
+    font-size: 16px;
 }
 
-nav li{
-    display: inline;
-    margin: 0 0 0 30px;
-    transition: width 0.5s, height 0.5s;
-    padding: 2px;
-}
-
-nav li:hover {
-    font-size: 21px;
-    }
-
-nav a {
-    font-weight: bold;
-    color: #72401E;
+header a {
     text-decoration: none;
-    font-size: 20px;
-    transition: width 0.5s, height 0.5s;
+    padding-left: 15px;
 }
 
-nav a:hover {
-    font-size: 21px;
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+header ul li{
+    text-decoration: none;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+}
+
+header ul li:hover{
+    font-weight: 900;
+}
+
+#logobunny {
+    width: 15%;
+    opacity: 0.8;
+    margin-left: 30px;
 }

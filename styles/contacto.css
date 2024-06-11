@@ -2,6 +2,11 @@
 @import url(/styles/navGeneral.css);
 @import url(/styles/footerStyle.css);
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
 main {
     background-color: #eae5d9;
     display: flex;

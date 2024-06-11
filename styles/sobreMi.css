@@ -13,16 +13,17 @@ main {
     display: flex;
     align-items: center;
     padding: 200px 80px 85px 90px;
+    line-height: 1.2;
 }
 /*Sección de presentación*/
 #presentacion h2 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
-    color: #72401E;
+    color: black;
 }
 
 #presentacion p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #redes {
@@ -31,8 +32,13 @@ main {
 
 #redes a {
     text-decoration: none;
-    color: #72401E;
+    color: black;
     font-weight: 500;
+}
+
+#redes a:hover{
+    color: #72401E;
+    font-weight: 700;
 }
 
 .redSocial {
@@ -62,17 +68,18 @@ main {
 
 #sobreMi h3{
     font-weight: 550;
-    font-size: 43px;
-    color: #eae5d9;
+    font-size: 30px;
+    color: #472a17;
 }
 
 #sobreMi p{
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 300;
+    line-height: 1.3;
 }
 
 #sobreMi a{
-    color: #eae5d9;
+    color: #3f2615;
     font-weight: 400;
 }
 
@@ -86,8 +93,8 @@ main {
 
 #skills h3 {
     font-weight: 550;
-    font-size: 43px;
-    color: #72401E;
+    font-size: 35px;
+    color: #2e1c10;
     text-align: center;
     padding-bottom: 40px;
 }
@@ -126,8 +133,8 @@ main {
 
 #formacion h3 {
     font-weight: 550;
-    font-size: 43px;
-    color: #72401E;
+    font-size: 35px;
+    color: #2e1c10;
     text-align: center;
     padding-bottom: 40px;
 }
@@ -170,8 +177,12 @@ main {
 
 #formacion h4 {
     padding: 10px 20px 10px 20px;
-    font-weight: 500;
+    font-weight: 800;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
+#formacion p {
+    font-size: 14px;
+}
 /*Sección proyectos Recientes*/
 

@@ -8,34 +8,58 @@
 
 /*padding: top, left, bottom, right*/
 
+p {
+    line-height: 1.3;
+}
+
 main {
-    background-color: black;
-    padding: 190px 50px 80px 70px;
+    background-color: white;
+    padding: 60px 50px 80px 70px;
     display: flex;
     align-items: center;
 }
-
-
-#presentacion h2 {
-    background: linear-gradient(to right, #72401E ,#fffdfc);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    font-size: 50px;    
+.textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-#presentacion p {
-    color: beige;
-    font-size: 20px;
+#bienvenida {
+    font-size: 50px;
+    position: absolute;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Playfair Display', serif;
+}
+
+#presentacion {
+    width: 100%;
+    height: 630px;
+    background-image: url('https://i.pinimg.com/564x/e9/e8/ba/e9e8ba1bee51e855713cbf20730238b1.jpg');
+    background-size: cover; 
+    background-position: center; 
+    position: relative; 
+}
+
+#presentaciontexto p {
+    color: black;
+    font-size: 17px;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 #logoPresenta {
-    width: 200px;
+    width: 400px;
     padding: 20px 40px 20px 130px;
 }
 
 #segundoCuerpo {
-    background-color:rgb(201, 180, 157);
+    background-color:rgb(223, 209, 193);
+}
+
+#segundoCuerpo h3 {
+    font-family: 'EB Garamond', serif;
 }
 
 /*Seccion de mision y vision*/
@@ -89,7 +113,7 @@ main {
     text-align: center;
     background-color: #eae5d9;
     width: 25%;
-    height: 250px;
+    height: 300px;
     border-radius:10%;
     margin: 10px;
 }
@@ -101,6 +125,7 @@ main {
 #valores img {
     padding-top: 30px;
     padding-bottom: 10px;
+    width: 80px;
 }
 
 

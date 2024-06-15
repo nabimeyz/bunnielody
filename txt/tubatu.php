@@ -27,7 +27,7 @@
     <header> <!--Parte superior de la página-->
 
         <div> <!--Logo-->
-           <a href="/index.html"><img id="logobunny" src="/sobreMi/imagenes/logo.jpg" alt="logo de la página"></a> 
+           <a href="/index.php"><img id="logobunny" src="/sobreMi/imagenes/logo.jpg" alt="logo de la página"></a> 
         </div>
     
         <nav> <!--Barra de navegación-->
@@ -114,7 +114,7 @@
         <section id="etiquetas">
             <h4>Sitios de interés</h4> <br>
             <ul id="sitiosInteres">
-                <a href="/index.html"><li>Inicio</li></a>
+                <a href="/index.php"><li>Inicio</li></a>
                 <a href="/sobreMi/sobreMi.html"><li>¿Quién creó el sitio?</li></a>
                 <a href="/formContacto/formContacto.html"><li>Contáctanos</li></a>
                 <a href="/metodoPago/pago.html"><li>Métodos de pago</li></a>

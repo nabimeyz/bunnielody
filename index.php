@@ -54,7 +54,7 @@
 
     <section class="contenedor">
         <article class= "caja"> 
-            <img src="/imagenes/bts.jpeg" alt="BTS" class="groupimg">
+            <a href="/bts/bts.php"><img src="/imagenes/bts.jpeg" alt="BTS" class="groupimg"></a>
             <a href="/bts/bts.php" class="hipGroup"><h3><b>BTS (방탄소년단)</b></h3></a>
             <p>También conocidos como Bangtan Boys, es un fenómeno global que ha conquistado corazones en todo el mundo.</p>
 
@@ -62,8 +62,8 @@
             <button onclick= 'muestra_oculta ("ocultar1")' class= "btn btn-primary" form="ocultar1">Cuentame más</button>
         </article>
         
-        <article class= "caja"> 
-            <img src="/imagenes/txt.jpeg" alt="TOMORROW X TOGETHER" class="groupimg">
+        <article class= "caja">
+            <a href="/txt/tubatu.php"><img src="/imagenes/txt.jpeg" alt="TOMORROW X TOGETHER" class="groupimg"></a> 
             <a href="/txt/tubatu.php" class="hipGroup"><h3><b>TOMORROW X TOGETHER</b></h3></a>
 
             <p>TXT es el grupo hermano de BTS, y desde su debut en 2019, han demostrado ser una fuerza imparable en la escena del K-pop.</p>
@@ -73,7 +73,7 @@
         </article>
         
         <article class= "caja"> 
-            <img src="/imagenes/nj1.jpeg" alt="Newjeans" class="groupimg">
+            <a href="/nj/newJeans.php"><img src="/imagenes/nj1.jpeg" alt="Newjeans" class="groupimg"></a>
             <a href="/nj/newJeans.php" class="hipGroup"><h3><b>NewJeans</b></h3></a>
 
             <p>NewJeans es la nueva sensación del K-pop que está revolucionando la industria con su estilo fresco y auténtico. </p>

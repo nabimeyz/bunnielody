@@ -28,7 +28,7 @@
     <header> <!--Parte superior de la página-->
 
         <div> <!--Logo-->
-           <a href="/index.html"><img id="logobunny" src="/sobreMi/imagenes/logo.jpg" alt="logo de la página"></a> 
+           <a href="/index.php"><img id="logobunny" src="/sobreMi/imagenes/logo.jpg" alt="logo de la página"></a> 
         </div>
     
         <nav> <!--Barra de navegación-->

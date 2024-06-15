@@ -22,7 +22,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
     
-
 <!--inicio del body-->
 <body>
     <header> <!--Parte superior de la página-->
@@ -37,6 +36,94 @@
                 <a href="/nj/newJeans.php"><li>NewJeans</li></a>
                 <a href="/txt/tubatu.php"><li>TXT</li></a>
                 <a href="/quienesSomos/quienesSomos.html"><li>Quienes Somos</li></a>
+                <a href="/carrito/carrito.php"><img id="carrito" src="/imagenes/carrito.png" alt="carrito"></a>  
             </ul>
         </nav>
     </header>
+
+    <main>
+        <!--presentación de formulario-->
+            <section id="presentacion">
+               <h2>Compra tus productos favoritos de TXT</h2> 
+               <br>
+               <p>La banda de chicos que ha capturado corazones con su frescura y energía juvenil. Aquí podrás adquirir álbumes y DVDs, incluyendo versiones limitadas y con firmas de autógrafos. Nuestra colección de ropa y accesorios presenta diseños únicos en camisetas, mochilas y pulseras. También contamos con lightsticks y merchandising de conciertos para que disfrutes al máximo de las presentaciones de TXT. <br> <br><strong>Nota:</strong> por el momento solo contamos con stock de albumes, espera al restock del siguiente mes.</p>
+            </section>
+            
+            <section id="sectionGroup">
+                <img id="imgGroup" src="https://i.pinimg.com/564x/8c/29/b3/8c29b3557ac36df96edbe05c15ee6c3b.jpg" alt="icono de duda">
+            </section>
+    </main>
+
+    <div class="separacion"> <!--Seṕaración y título de sección-->
+        <h2>Productos disponibles</h2>
+    </div>
+
+    <section id="productos">
+
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://i.pinimg.com/564x/45/b2/2c/45b22c3a09eae744bf0c780da0f84610.jpg" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">TXT MINIMOSE: BLUE HOUR</h5>
+                    <p class="card-text"> por: $500</p>
+                    <div class="d-flex justify-content-between align-items-center"></div>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-success">Al carrito</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://i.pinimg.com/564x/bf/d3/21/bfd321117f451c676b6f1ef5b55fd730.jpg" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">TXT MINIMOSE: BLUE HOUR</h5>
+                    <p class="card-text"> por: $500</p>
+                    <div class="d-flex justify-content-between align-items-center"></div>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-success">Al carrito</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://i.pinimg.com/736x/10/66/3a/10663abf32b130964df6f07c17744ee9.jpg" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">TXT MINIMOSE: BLUE HOUR</h5>
+                    <p class="card-text"> por: $500</p>
+                    <div class="d-flex justify-content-between align-items-center"></div>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-success">Al carrito</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+    </section>
+
+    <footer>
+        <section id="etiquetas">
+            <h4>Sitios de interés</h4> <br>
+            <ul id="sitiosInteres">
+                <a href="/index.html"><li>Inicio</li></a>
+                <a href="/sobreMi/sobreMi.html"><li>¿Quién creó el sitio?</li></a>
+                <a href="/formContacto/formContacto.html"><li>Contáctanos</li></a>
+                <a href="/metodoPago/pago.html"><li>Métodos de pago</li></a>
+            </ul>
+        </section>
+        <section id="logo">
+            <img src="/sobreMi/imagenes/logo.jpg" alt="logo">
+            <p>© 2024. Metztli Huertero Granada</p>
+        </section>
+    </footer>
+</body>
+
+</html>

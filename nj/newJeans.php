@@ -37,7 +37,39 @@
                 <a href="/nj/newJeans.php"><li>NewJeans</li></a>
                 <a href="/txt/tubatu.php"><li>TXT</li></a>
                 <a href="/quienesSomos/quienesSomos.html"><li>Quienes Somos</li></a>
+                <a href="/carrito/carrito.php"><img id="carrito" src="/imagenes/carrito.png" alt="carrito"></a>  
             </ul>
         </nav>
     </header>
 
+    <main>
+        <!--presentación de formulario-->
+            <section id="presentacion">
+               <h2>Compra tus productos favoritos de NewJeans</h2> 
+               <br>
+               <p>La nueva sensación del K-pop está marcando tendencias con su estilo único y música innovadora. Descubre los álbumes y DVDs de NewJeans en diferentes formatos y ediciones. Nuestra línea de ropa y accesorios ofrece moda contemporánea y artículos con el sello distintivo de la banda. Prepara todo lo necesario para sus presentaciones en vivo con nuestros lightsticks y merchandising de conciertos. Además, ofrecemos una selección de juguetes y gadgets inspirados en la esencia de NewJeans, ideales para divertirse y expresar tu amor por la banda.</p>
+            </section>
+            
+            <section id="sectionGroup">
+                <img id="imgGroup" src="https://i.pinimg.com/564x/d2/8f/ae/d28fae83b289d573de3fbf0e2c140302.jpg" alt="icono de grupo">
+            </section>
+    </main>
+
+    <footer>
+        <section id="etiquetas">
+            <h4>Sitios de interés</h4> <br>
+            <ul id="sitiosInteres">
+                <a href="/index.html"><li>Inicio</li></a>
+                <a href="/sobreMi/sobreMi.html"><li>¿Quién creó el sitio?</li></a>
+                <a href="/formContacto/formContacto.html"><li>Contáctanos</li></a>
+                <a href="/metodoPago/pago.html"><li>Métodos de pago</li></a>
+            </ul>
+        </section>
+        <section id="logo">
+            <img src="/sobreMi/imagenes/logo.jpg" alt="logo">
+            <p>© 2024. Metztli Huertero Granada</p>
+        </section>
+    </footer>
+
+</body>
+</html>

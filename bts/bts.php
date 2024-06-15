@@ -38,6 +38,44 @@
                 <a href="/nj/newJeans.php"><li>NewJeans</li></a>
                 <a href="/txt/tubatu.php"><li>TXT</li></a>
                 <a href="/quienesSomos/quienesSomos.html"><li>Quienes Somos</li></a>
+                <a href="/carrito/carrito.php"><img id="carrito" src="/imagenes/carrito.png" alt="carrito"></a> 
             </ul>
         </nav>
     </header>
+
+    <main>
+        <!--presentación de formulario-->
+            <section id="presentacion">
+               <h2>Compra tus productos favoritos de BTS</h2> 
+               <br>
+               <p>La icónica banda de K-pop que ha conquistado el mundo con su música y talento. En nuestra tienda, puedes encontrar álbumes y DVDs con ediciones especiales y coleccionables. También disponemos de ropa y accesorios, como camisetas, sudaderas y gorras, todos con diseños exclusivos. No pueden faltar los lightsticks y merchandising de conciertos, incluyendo los emblemáticos lightsticks ARMY Bomb, pósters y programas de sus giras mundiales. Además, ofrecemos figuras y coleccionables perfectos para cualquier fanático.</p>
+            </section>
+            
+            <section id="sectionGroup">
+                <img id="imgGroup" src="https://i.pinimg.com/736x/71/72/11/717211acfd7564ad69ae5aa5ae80c012.jpg" alt="icono de duda">
+            </section>
+    </main>
+
+
+
+
+
+    <footer>
+        <section id="etiquetas">
+            <h4>Sitios de interés</h4> <br>
+            <ul id="sitiosInteres">
+                <a href="/index.html"><li>Inicio</li></a>
+                <a href="/sobreMi/sobreMi.html"><li>¿Quién creó el sitio?</li></a>
+                <a href="/formContacto/formContacto.html"><li>Contáctanos</li></a>
+                <a href="/metodoPago/pago.html"><li>Métodos de pago</li></a>
+            </ul>
+        </section>
+    
+        <section id="logo">
+            <img src="/sobreMi/imagenes/logo.jpg" alt="logo">
+            <p>© 2024. Metztli Huertero Granada</p>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,3 +1,13 @@
+<?php 
+    require __DIR__ . '/../carrito/database.php';
+    $db = new Database ();
+    $con = $db->conectar();
+
+    $sql = $con->prepare("SELECT id_productos, nombre, precio FROM productos WHERE existencia = 1 AND id_grupo = 1");
+    $sql->execute();
+    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!--metadatos-->
 <!DOCTYPE html>
 <html lang="es">
@@ -64,42 +74,25 @@
 <section id="productos">
 
 <div class="album py-5 bg-body-tertiary">
+
     <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <?php foreach ($resultado as $row) { ?>
         <div class="col">
         <div class="card shadow-sm">
-            <img src="https://i.pinimg.com/564x/f4/ea/ab/f4eaab1d069bc3fe0cd79e556d1a423c.jpg" alt="album mots 7">
-            <div class="card-body">
-            <h5 class="card-title">Map of the Soul: 7</h5>
-            <p class="card-text">$779.00 MXN</p>
-            <div class="d-flex justify-content-between align-items-center"></div>
-                <div class="btn-group">
-                    <a href="" class="btn btn-success">Al carrito</a>
-                </div>
-            </div>
-            </div>
-        </div>
 
-        <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://i.pinimg.com/564x/c0/bd/ef/c0bdef7b0b2fbe92fc4021e9003a1571.jpg" alt="album wings">
-            <div class="card-body">
-            <h5 class="card-title">Wings</h5>
-            <p class="card-text">$689.00 MXN</p>
-            <div class="d-flex justify-content-between align-items-center"></div>
-                <div class="btn-group">
-                    <a href="" class="btn btn-success">Al carrito</a>
-                </div>
-            </div>
-            </div>
-        </div>
+        <?php 
+        $id = $row["id_productos"];
+        $imagen = "../imagenes/productos/$id/item.jpg";
 
-        <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://i.pinimg.com/564x/80/e7/eb/80e7eb8e3c971ef50a2f9117ffd9262c.jpg" alt="LY: Answer">
+        if (!file_exists(__DIR__ . "/$imagen")) {
+            $imagen = "../imagenes/nofoto.jpg"; // Ruta a la imagen de "No disponible"
+        }
+        ?>
+        <img src="<?php echo $imagen?>" alt="imagen del producto">
             <div class="card-body">
-            <h5 class="card-title">Love Yourself: Answer</h5>
-            <p class="card-text"> $910.00 MXN</p>
+                <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
+                <p class="card-text">$<?php echo $row['precio']; ?> MXN</p>
             <div class="d-flex justify-content-between align-items-center"></div>
                 <div class="btn-group">
                     <a href="" class="btn btn-success">Al carrito</a>
@@ -107,8 +100,13 @@
             </div>
             </div>
         </div>
-        </div>
+    <?php  }?>
+
+        
+
+
     </div>
+</div>
 </section>       
 
    <footer>

@@ -1,7 +1,9 @@
 <?php
-class database {
+class Database {
+
+    //las propiedades se cambian cuando se sube a un web host
     private $hostname= "localhost";
-    private $database="bunnielody-bd";
+    private $database="bunnielody-db";
     private $username= "root";
     private $password= "MiliPercy2001.";
     private $charset= "utf8";

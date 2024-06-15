@@ -48,19 +48,70 @@
             <section id="presentacion">
                <h2>Compra tus productos favoritos de BTS</h2> 
                <br>
-               <p>La icónica banda de K-pop que ha conquistado el mundo con su música y talento. En nuestra tienda, puedes encontrar álbumes y DVDs con ediciones especiales y coleccionables. También disponemos de ropa y accesorios, como camisetas, sudaderas y gorras, todos con diseños exclusivos. No pueden faltar los lightsticks y merchandising de conciertos, incluyendo los emblemáticos lightsticks ARMY Bomb, pósters y programas de sus giras mundiales. Además, ofrecemos figuras y coleccionables perfectos para cualquier fanático.</p>
+               <p>La icónica banda de K-pop que ha conquistado el mundo con su música y talento. En nuestra tienda, puedes encontrar álbumes y DVDs con ediciones especiales y coleccionables. También disponemos de ropa y accesorios, como camisetas, sudaderas y gorras, todos con diseños exclusivos. No pueden faltar los lightsticks y merchandising de conciertos, incluyendo los emblemáticos lightsticks ARMY Bomb, pósters y programas de sus giras mundiales. Además, ofrecemos figuras y coleccionables perfectos para cualquier fanático.<br> <br><strong>Nota:</strong> por el momento solo contamos con stock de albumes, espera al restock del siguiente mes</p>
             </section>
             
             <section id="sectionGroup">
-                <img id="imgGroup" src="https://i.pinimg.com/736x/71/72/11/717211acfd7564ad69ae5aa5ae80c012.jpg" alt="icono de duda">
+                <img id="imgGroup" src="https://i.pinimg.com/736x/71/72/11/717211acfd7564ad69ae5aa5ae80c012.jpg" alt="icono del grupo">
             </section>
     </main>
 
+    <div class="separacion"> <!--Seṕaración y título de sección-->
+        <h2>Productos disponibles</h2>
+    </div>
 
+<!--Listado de productos en venta-->
+<section id="productos">
 
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="https://i.pinimg.com/564x/f4/ea/ab/f4eaab1d069bc3fe0cd79e556d1a423c.jpg" alt="album mots 7">
+            <div class="card-body">
+            <h5 class="card-title">Map of the Soul: 7</h5>
+            <p class="card-text">$779.00 MXN</p>
+            <div class="d-flex justify-content-between align-items-center"></div>
+                <div class="btn-group">
+                    <a href="" class="btn btn-success">Al carrito</a>
+                </div>
+            </div>
+            </div>
+        </div>
 
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="https://i.pinimg.com/564x/c0/bd/ef/c0bdef7b0b2fbe92fc4021e9003a1571.jpg" alt="album wings">
+            <div class="card-body">
+            <h5 class="card-title">Wings</h5>
+            <p class="card-text">$689.00 MXN</p>
+            <div class="d-flex justify-content-between align-items-center"></div>
+                <div class="btn-group">
+                    <a href="" class="btn btn-success">Al carrito</a>
+                </div>
+            </div>
+            </div>
+        </div>
 
-    <footer>
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="https://i.pinimg.com/564x/80/e7/eb/80e7eb8e3c971ef50a2f9117ffd9262c.jpg" alt="LY: Answer">
+            <div class="card-body">
+            <h5 class="card-title">Love Yourself: Answer</h5>
+            <p class="card-text"> $910.00 MXN</p>
+            <div class="d-flex justify-content-between align-items-center"></div>
+                <div class="btn-group">
+                    <a href="" class="btn btn-success">Al carrito</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>       
+
+   <footer>
         <section id="etiquetas">
             <h4>Sitios de interés</h4> <br>
             <ul id="sitiosInteres">

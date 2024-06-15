@@ -58,6 +58,7 @@
         <h2>Productos disponibles</h2>
     </div>
 
+<!--Sección de productos en venta-->
     <section id="productos">
 
         <div class="album py-5 bg-body-tertiary">
@@ -67,8 +68,8 @@
                 <div class="card shadow-sm">
                     <img src="https://i.pinimg.com/564x/45/b2/2c/45b22c3a09eae744bf0c780da0f84610.jpg" alt="">
                     <div class="card-body">
-                    <h5 class="card-title">TXT MINIMOSE: BLUE HOUR</h5>
-                    <p class="card-text"> por: $500</p>
+                    <h5 class="card-title">Minisode 2: Thursday's Child</h5>
+                    <p class="card-text">$579.00 MXN</p>
                     <div class="d-flex justify-content-between align-items-center"></div>
                         <div class="btn-group">
                             <a href="" class="btn btn-success">Al carrito</a>
@@ -81,8 +82,8 @@
                 <div class="card shadow-sm">
                     <img src="https://i.pinimg.com/564x/bf/d3/21/bfd321117f451c676b6f1ef5b55fd730.jpg" alt="">
                     <div class="card-body">
-                    <h5 class="card-title">TXT MINIMOSE: BLUE HOUR</h5>
-                    <p class="card-text"> por: $500</p>
+                    <h5 class="card-title">Minisode 1: Blue Hour</h5>
+                    <p class="card-text">$920.00 MXN</p>
                     <div class="d-flex justify-content-between align-items-center"></div>
                         <div class="btn-group">
                             <a href="" class="btn btn-success">Al carrito</a>
@@ -95,8 +96,8 @@
                 <div class="card shadow-sm">
                     <img src="https://i.pinimg.com/736x/10/66/3a/10663abf32b130964df6f07c17744ee9.jpg" alt="">
                     <div class="card-body">
-                    <h5 class="card-title">TXT MINIMOSE: BLUE HOUR</h5>
-                    <p class="card-text"> por: $500</p>
+                    <h5 class="card-title">Minisode 3: TOMORROW</h5>
+                    <p class="card-text"> $780.00 MXN</p>
                     <div class="d-flex justify-content-between align-items-center"></div>
                         <div class="btn-group">
                             <a href="" class="btn btn-success">Al carrito</a>

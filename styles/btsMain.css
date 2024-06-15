@@ -46,3 +46,19 @@ main {
     padding-right: 30px;
     border-radius: 50%;
 }
+
+/*formato de separadores de página*/
+.separacion {
+    background-color: #d1c8c2;
+}
+
+.separacion h2 {
+    color:rgb(58, 54, 54);
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 20px;
+    font-size: 29px;
+    font-family: 'EB Garamond', serif;
+}
+
+

@@ -47,13 +47,69 @@
             <section id="presentacion">
                <h2>Compra tus productos favoritos de NewJeans</h2> 
                <br>
-               <p>La nueva sensación del K-pop está marcando tendencias con su estilo único y música innovadora. Descubre los álbumes y DVDs de NewJeans en diferentes formatos y ediciones. Nuestra línea de ropa y accesorios ofrece moda contemporánea y artículos con el sello distintivo de la banda. Prepara todo lo necesario para sus presentaciones en vivo con nuestros lightsticks y merchandising de conciertos. Además, ofrecemos una selección de juguetes y gadgets inspirados en la esencia de NewJeans, ideales para divertirse y expresar tu amor por la banda.</p>
+               <p>La nueva sensación del K-pop está marcando tendencias con su estilo único y música innovadora. Descubre los álbumes y DVDs de NewJeans en diferentes formatos y ediciones. Prepara todo lo necesario para sus presentaciones en vivo con nuestros lightsticks y merchandising de conciertos.</p>
             </section>
             
             <section id="sectionGroup">
                 <img id="imgGroup" src="https://i.pinimg.com/564x/d2/8f/ae/d28fae83b289d573de3fbf0e2c140302.jpg" alt="icono de grupo">
             </section>
     </main>
+
+    <div class="separacion"> <!--Seṕaración y título de sección-->
+        <h2>Productos disponibles</h2>
+    </div>
+
+<!--Sección de productos en venta-->
+    <section id="productos">
+
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://i.pinimg.com/564x/90/f0/f9/90f0f9afeccf7d4ae77a3aa381f19f89.jpg" alt="album get up">
+                    <div class="card-body">
+                    <h5 class="card-title">Get Up, versión especial (TPG x NJ)</h5>
+                    <p class="card-text">$579.00 MXN</p>
+                    <div class="d-flex justify-content-between align-items-center"></div>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-success">Al carrito</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://i.pinimg.com/564x/64/4c/32/644c3257b1e147ec52c5e1c76002dae9.jpg" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title"> 1st EP 'New Jeans' Weverse Albums version</h5>
+                    <p class="card-text">$420.00 MXN</p>
+                    <div class="d-flex justify-content-between align-items-center"></div>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-success">Al carrito</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://i.pinimg.com/564x/27/ec/63/27ec63a6bd5926a9d7635bc1a3a20ebe.jpg" alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">NewJeans Lightstick</h5>
+                    <p class="card-text"> $980.00 MXN</p>
+                    <div class="d-flex justify-content-between align-items-center"></div>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-success">Al carrito</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+    </section>
 
     <footer>
         <section id="etiquetas">

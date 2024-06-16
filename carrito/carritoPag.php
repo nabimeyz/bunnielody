@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/styles/carritoStyle.css">
     
     <!--Titulo e icono de barra de navegación-->
-    <title>Bunnielody - Inicio</title>
+    <title>Bunnielody - Carrito</title>
     <link rel="icon" href="/imagenes/conejito.png" type="image/x-icon">
 
     <!--importación de elementos para funcionamiento del carrusel-->

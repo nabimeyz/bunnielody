@@ -115,9 +115,12 @@
         </div>
     </div>
     
+    <?php
+    if ($mensaje!=""){?>
     <div class="alert alert-success" id="estadoCompra">
-        <?php echo ($mensaje)?>
+        <?php echo ("Producto agregado al carrito");?>
     </div>
+    <?php } ?>
         
 </section>       
 

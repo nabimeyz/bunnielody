@@ -21,9 +21,6 @@
     <title>Bunnielody - Procesando tu pago</title>
     <link rel="icon" href="/imagenes/conejito.png" type="image/x-icon">
 
-    <!--importación de elementos para funcionamiento del carrusel-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <!--Script de funciones de paypal-->
     <script src="https://www.paypal.com/sdk/js?client-id=AQkBZPZfUgfEenEcSfqAQJHAVsRaZCByw9cdLuIZ_cgHPvmPxZUV4x2csDo42uF2LfMOP5cRsffKKE5g&currency=MXN" data-sdk-integration-source="button-factory"></script>
 
@@ -112,9 +109,7 @@ foreach($_SESSION['CARRITO'] as $indice => $producto) {
             
             // Full available details
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
- 
-actions.redirect('LA URL DE TU PAGINA DE GRACIAS');
-            
+            window.location.href = '/carrito/gracias.php';
           });
         },
 

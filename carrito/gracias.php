@@ -13,15 +13,11 @@
     
     <!--hoja de estilos - bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/carritoStyle.css">
+    <link rel="stylesheet" href="/styles/graciasStyle.css">
     
     <!--Titulo e icono de barra de navegación-->
-    <title>Bunnielody - Carrito</title>
+    <title>Bunnielody - Gracias por tu compra</title>
     <link rel="icon" href="/imagenes/conejito.png" type="image/x-icon">
-
-    <!--importación de elementos para funcionamiento del carrusel-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
 
 <body> <!--Cuerpo de la página-->
 <header> <!--Parte superior de la página-->
@@ -38,73 +34,19 @@
     </nav>
 </header>
 
+<?php // Destruye todos los datos de la sesión actual
+session_destroy();?>
 
 <!--Resumen del carrito-->
 <section id="resumen">
-<h2 id="titlecarrito">Carrito</h2>
-<p id="resumenP">Este es el resumen de tu compra:</p>
-    <?php if (!empty($_SESSION['CARRITO'])){?>
-    <table class="table table-bordered table-light">
-        <tbody>
-            <tr>
-                <th width="40%">Descripción</th>
-                <th width="15%">Cantidad</th>
-                <th width="20%">Precio</th>
-                <th width="20%">Total</th>
-                <th width="5%">--</th>
-            </tr>
-            <?php $total=0;?>
-            <?php foreach ($_SESSION['CARRITO'] as $indice => $producto){?>
-                <tr>
-                <td width="40%" class="tdDescripcion"><?php echo htmlspecialchars($producto['NOMBRE']); ?></td>
-                <td width="15%"><?php echo intval($producto['CANTIDAD']); ?></td>
-                <td width="20%">$<?php echo number_format(floatval($producto['PRECIO']), 2); ?></td>
-                <td width="20%">$<?php echo number_format(floatval($producto['PRECIO']) * intval($producto['CANTIDAD']), 2); ?></td>
-                <td width="5%">
-                    <form action="" method="post">
-                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($producto['ID'],COD,KEY); ?>">
-                       <button 
-                       class="btn btn-danger"
-                       type="submit"
-                       name="btnAccion"
-                       value="eliminar">Eliminar</button>
-                    </form>
-                </td>
-            </tr>
-            <?php $total += floatval($producto['PRECIO']) * intval($producto['CANTIDAD']); ?>
-            <?php } ?>
-            <tr>
-                <td colspan="5"></td>
-            </tr>
-            <tr class="totalinfo">
-                <td></td>
-                <td colspan="2" align="right"><strong>Total</strong></td>
-                <td align="right">$<?php echo number_format($total, 2); ?></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <section id="procesaCompra">
-    <form action="pagar.php" method="post">
-        <div class="alert alert-info">
-            <div class="form-group">
-            <p id="resumenP">Por favor, ingrese el correo de contacto a donde le haremos llegar la información de su pedido.</p>
-            <input id="email" name="email" class="form-control" type="email" id="email" placeholder="Ingrese un correo valido" required>
-            </div>
-        </div>
-        <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion" value="proceder" id="btnpago">Continúe con el pago</button>
-        <br>
-        <br>
-        <a href="/index.php#introduccion"> o puede regresar a la tienda</a>
-    </form>
-    </section>
-<?php } else {?>
-<div class="alert alert-success">
-    No hay productos en el carrito
-</div>
-<?php }?>
+    <h2 id="titlecarrito">Muchas gracias por tu compra</h2>
+    <p id="resumenP">En breve recibirás un correo con los detalles de tu compra, así como los plazos y detalles del proceso de entrega de tus productos. Esperamos que tu experiencia con Bunnielody haya sido la mejor.</p>
 </section>
+
+    <section id="redireccionamiento">
+        <a href="/index.php#introduccion">Regresar a la tienda</a>
+    </section>
+        
 
 <!--Footer-->
 <footer>

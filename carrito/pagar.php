@@ -23,6 +23,10 @@
 
     <!--importación de elementos para funcionamiento del carrusel-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--Script de funciones de paypal-->
+    <script src="https://www.paypal.com/sdk/js?client-id=AQkBZPZfUgfEenEcSfqAQJHAVsRaZCByw9cdLuIZ_cgHPvmPxZUV4x2csDo42uF2LfMOP5cRsffKKE5g&currency=MXN" data-sdk-integration-source="button-factory"></script>
+
 </head>
 
 <body> <!--Cuerpo de la página-->
@@ -32,10 +36,7 @@
     </div>
     <nav>
         <ul>
-                <a href="/bts/bts.php"><li>BTS</li></a>
-                <a href="/nj/newJeans.php"><li>NewJeans</li></a>
-                <a href="/txt/tubatu.php"><li>TXT</li></a>
-                <a href="/quienesSomos/quienesSomos.html"><li>Quienes Somos</li></a>
+            <p class="lead" id="procesoMsj">Vamos a procesar tu pago</p>
         </ul>
     </nav>
 </header>
@@ -45,38 +46,87 @@
 if($_POST) {
     $total = 0;
     $SID =session_id(); //tomar el id de la sesion activa
+    $Correo = $_POST['email'];
 
     foreach($_SESSION['CARRITO'] as $indice => $producto) {
         $total += ($producto['PRECIO'] * $producto['CANTIDAD']);}
 }
-$sentencia = $con ->prepare ("INSERT INTO `venta` (`id_venta`, `claveTransaccion`, `paypalDatos`, `fecha`, `correo`, `total`, `status`) VALUES (NULL, 'pruevaclave', '', '2024-06-16 09:28:15.000000', 'lunita@gmail.com', '500', 'pendiente');");
+$sentencia = $con ->prepare ("INSERT INTO `venta` (`id_venta`, `claveTransaccion`, `paypalDatos`, `fecha`, `correo`, `total`, `status`) VALUES (NULL,:claveTransaccion, '', NOW(), :correo, :total, 'pendiente');");
 
-
-
+$sentencia->bindParam(":claveTransaccion", $SID);
+$sentencia->bindParam(":correo", $Correo);
+$sentencia->bindParam(":total", $total);
 $sentencia->execute();
 
-echo "<h3>".$total."</h3>";
+//recuperar id de venta
+$idVenta = $con->lastInsertId();
+
+foreach($_SESSION['CARRITO'] as $indice => $producto) {
+    $sentencia = $con ->prepare ("INSERT INTO `detalleventa` (`id_detalle`, `id_venta`, `id_producto`, `precioUnitario`, `cantidad`, `entrega`) VALUES (NULL, :id_venta, :id_producto, :precioUnitario, :cantidad, '0');");
+
+    $sentencia->bindParam(":id_venta", $idVenta);
+    $sentencia->bindParam(":id_producto", $producto['ID']); //SI NO ES, ES id_producto
+    $sentencia->bindParam(":precioUnitario", $producto['PRECIO']);
+    $sentencia->bindParam(":cantidad", $producto['CANTIDAD']);
+    $sentencia->execute();
+}
 ?>
-</section>
 
+<!--Empieza sección de mensaje de redireccionamiento-->
 
-<!--Footer-->
-<footer>
-        <section id="etiquetas">
-            <h4>Sitios de interés</h4> <br>
-            <ul id="sitiosInteres">
-                <a href="/index.php"><li>Inicio</li></a>
-                <a href="/sobreMi/sobreMi.html"><li>¿Quién creó el sitio?</li></a>
-                <a href="/formContacto/formContacto.html"><li>Contáctanos</li></a>
-                <a href="/metodoPago/pago.html"><li>Métodos de pago</li></a>
-            </ul>
-        </section>
+<div class="jumbotron">
+    <h1 class="display-4">Ya casi está</h1>
+    <hr class="my-4">
+    <p class="lead">Estas a punto de pagar con Paypal, la cantidad de: <strong>$<?php echo number_format($total, 2); ?> MXN</strong></p>
     
-        <section id="logo">
-            <img src="/sobreMi/imagenes/logo.jpg" alt="logo">
-            <p>© 2024. Metztli Huertero Granada</p>
-        </section>
-    </footer>
+    <br> <br>
+    <p class="lead">Podras descargar tu comprobante de pago una vez que éste se procese.<br>En caso de alguna duda o aclaración, envíe un mensaje con su número de pedido al correo <strong>metztli.hugr@gmail.com</strong></p>
+    <br> <br> 
+    <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+</div>
+
+<!--Aqui empieza el script de paypal-->
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'pay',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"Compra en Bunnielody","amount":{"currency_code":"MXN","value":"<?php echo $total; ?>"}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+ 
+actions.redirect('LA URL DE TU PAGINA DE GRACIAS');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+<!--Aquí termina el script de paypal-->
+</section>
 
 </body>
 

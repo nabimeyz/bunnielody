@@ -1,6 +1,5 @@
 @import url(/styles/reset.css);
 @import url(/styles/navGeneral.css);
-@import url(/styles/footerStyle.css);
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
@@ -24,5 +23,24 @@ a:hover {
 }
 
 #resumen {
-    padding-top: 200px;
+    padding: 170px 50px 80px 50px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.jumbotron {
+    padding: 0px 220px 30px 220px;
+    align-items: end;
+
+}
+
+#procesoMsj {
+    color: white;
+}
+
+#smart-button-container {
+    max-width: 100%;
+
 }

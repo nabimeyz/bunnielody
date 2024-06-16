@@ -1,4 +1,5 @@
 <?php 
+    //conexión de base de datos y funciones de carrito
     require __DIR__ . '/../carrito/database.php';
     require  __DIR__ . '/../carrito/carrito.php';
     $db = new Database ();
@@ -47,7 +48,8 @@
                 <a href="/nj/newJeans.php"><li>NewJeans</li></a>
                 <a href="/txt/tubatu.php"><li>TXT</li></a>
                 <a href="/quienesSomos/quienesSomos.html"><li>Quienes Somos</li></a>
-                <a href="/carrito/carrito.php"><img id="carrito" src="/imagenes/carrito.png" alt="carrito"></a>  
+                <a href="/carrito/carritoPag.php"><li>Carrito (<?php
+                    echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);?>)</li></a>  
             </ul>
         </nav>
     </header>
@@ -93,17 +95,15 @@
                 <div class="d-flex justify-content-between align-items-center"></div>
                     <div class="btn-group">
                         <form action="" method="post">
-                        <input type="text" name="id" id="id" value="<?php echo openssl_encrypt($row['id_productos'],COD,KEY); ?>">
-                        <input type="text" name="nombre" id="nombre" value="<?php echo openssl_encrypt($row['nombre'],COD,KEY); ?>">
-                        <input type="text" name="precio" id="precio" value="<?php echo openssl_encrypt($row['precio'],COD,KEY); ?>">
-                        <input type="number" name="cantidad" value="1" min="1">
+                        <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($row['id_productos'],COD,KEY); ?>">
+                        <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt($row['nombre'],COD,KEY); ?>">
+                        <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row['precio'],COD,KEY); ?>">
+                        <input type="hidden" name="cantidad" value="1" min="1">
 
                         <button class="btn btn-outline-primary"
                              type="submit"
                              value="agregar"
                              name="btnAccion">Agregar al carrito</button> 
-
-
                         </form>    
                     </div>
                 </div>

@@ -1,3 +1,13 @@
+<?php 
+    require __DIR__ . '/../carrito/database.php';
+    $db = new Database ();
+    $con = $db->conectar();
+
+    $sql = $con->prepare("SELECT id_productos, nombre, precio FROM productos WHERE existencia = 1 AND id_grupo = 3");
+    $sql->execute();
+    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!--metadatos-->
 <!DOCTYPE html>
 <html lang="es">
@@ -59,57 +69,38 @@
         <h2>Productos disponibles</h2>
     </div>
 
-<!--Sección de productos en venta-->
-    <section id="productos">
+<!--Listado de productos en venta-->
+<section id="productos">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <?php foreach ($resultado as $row) { ?>
+            <div class="col">
+            <div class="card shadow-sm">
 
-        <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                <div class="card shadow-sm">
-                    <img src="https://i.pinimg.com/564x/90/f0/f9/90f0f9afeccf7d4ae77a3aa381f19f89.jpg" alt="album get up">
-                    <div class="card-body">
-                    <h5 class="card-title">Get Up, versión especial (TPG x NJ)</h5>
-                    <p class="card-text">$579.00 MXN</p>
-                    <div class="d-flex justify-content-between align-items-center"></div>
-                        <div class="btn-group">
-                            <a href="" class="btn btn-success">Al carrito</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+            <?php 
+            $id = $row["id_productos"];
+            $imagen = "../imagenes/productos/$id/item.jpg";
 
-                <div class="col">
-                <div class="card shadow-sm">
-                    <img src="https://i.pinimg.com/564x/64/4c/32/644c3257b1e147ec52c5e1c76002dae9.jpg" alt="">
-                    <div class="card-body">
-                    <h5 class="card-title"> 1st EP 'New Jeans' Weverse Albums version</h5>
-                    <p class="card-text">$420.00 MXN</p>
-                    <div class="d-flex justify-content-between align-items-center"></div>
-                        <div class="btn-group">
-                            <a href="" class="btn btn-success">Al carrito</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                <div class="card shadow-sm">
-                    <img src="https://i.pinimg.com/564x/27/ec/63/27ec63a6bd5926a9d7635bc1a3a20ebe.jpg" alt="">
-                    <div class="card-body">
-                    <h5 class="card-title">NewJeans Lightstick</h5>
-                    <p class="card-text"> $980.00 MXN</p>
-                    <div class="d-flex justify-content-between align-items-center"></div>
-                        <div class="btn-group">
-                            <a href="" class="btn btn-success">Al carrito</a>
-                        </div>
-                    </div>
+            if (!file_exists(__DIR__ . "/$imagen")) {
+                $imagen = "../imagenes/nofoto.jpg"; // Ruta a la imagen de "No disponible"
+            }
+            ?>
+            
+            <img src="<?php echo $imagen?>" alt="imagen del producto">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
+                    <p class="card-text">$<?php echo $row['precio']; ?> MXN</p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+                    <div class="btn-group">
+                        <a href="" class="btn btn-success">Al carrito</a>
                     </div>
                 </div>
                 </div>
             </div>
-
-    </section>
+        <?php  }?>
+        </div>
+    </div>
+</section>     
 
     <footer>
         <section id="etiquetas">

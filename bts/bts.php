@@ -72,41 +72,35 @@
 
 <!--Listado de productos en venta-->
 <section id="productos">
-
-<div class="album py-5 bg-body-tertiary">
-
     <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <?php foreach ($resultado as $row) { ?>
-        <div class="col">
-        <div class="card shadow-sm">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <?php foreach ($resultado as $row) { ?>
+            <div class="col">
+            <div class="card shadow-sm">
 
-        <?php 
-        $id = $row["id_productos"];
-        $imagen = "../imagenes/productos/$id/item.jpg";
+            <?php 
+            $id = $row["id_productos"];
+            $imagen = "../imagenes/productos/$id/item.jpg";
 
-        if (!file_exists(__DIR__ . "/$imagen")) {
-            $imagen = "../imagenes/nofoto.jpg"; // Ruta a la imagen de "No disponible"
-        }
-        ?>
-        <img src="<?php echo $imagen?>" alt="imagen del producto">
-            <div class="card-body">
-                <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
-                <p class="card-text">$<?php echo $row['precio']; ?> MXN</p>
-            <div class="d-flex justify-content-between align-items-center"></div>
-                <div class="btn-group">
-                    <a href="" class="btn btn-success">Al carrito</a>
+            if (!file_exists(__DIR__ . "/$imagen")) {
+                $imagen = "../imagenes/nofoto.jpg"; // Ruta a la imagen de "No disponible"
+            }
+            ?>
+            
+            <img src="<?php echo $imagen?>" alt="imagen del producto">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
+                    <p class="card-text">$<?php echo $row['precio']; ?> MXN</p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+                    <div class="btn-group">
+                        <a href="" class="btn btn-success">Al carrito</a>
+                    </div>
+                </div>
                 </div>
             </div>
-            </div>
+        <?php  }?>
         </div>
-    <?php  }?>
-
-        
-
-
     </div>
-</div>
 </section>       
 
    <footer>

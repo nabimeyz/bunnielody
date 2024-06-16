@@ -1,3 +1,14 @@
+<?php 
+    require __DIR__ . '/../carrito/database.php';
+    require  __DIR__ . '/../carrito/carrito.php';
+    $db = new Database ();
+    $con = $db->conectar();
+
+    $sql = $con->prepare("SELECT id_productos, nombre, precio FROM productos WHERE existencia = 1 AND id_grupo = 2");
+    $sql->execute();
+    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!--metadatos-->
 <!DOCTYPE html>
 <html lang="es">
@@ -58,57 +69,55 @@
         <h2>Productos disponibles</h2>
     </div>
 
-<!--Sección de productos en venta-->
-    <section id="productos">
+    <!--Listado de productos en venta-->
+<section id="productos">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <?php foreach ($resultado as $row) { ?>
+            <div class="col">
+            <div class="card shadow-sm">
 
-        <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                <div class="card shadow-sm">
-                    <img src="https://i.pinimg.com/564x/45/b2/2c/45b22c3a09eae744bf0c780da0f84610.jpg" alt="">
-                    <div class="card-body">
-                    <h5 class="card-title">Minisode 2: Thursday's Child</h5>
-                    <p class="card-text">$579.00 MXN</p>
-                    <div class="d-flex justify-content-between align-items-center"></div>
-                        <div class="btn-group">
-                            <a href="" class="btn btn-success">Al carrito</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+            <?php 
+            $id = $row["id_productos"];
+            $imagen = "../imagenes/productos/$id/item.jpg";
 
-                <div class="col">
-                <div class="card shadow-sm">
-                    <img src="https://i.pinimg.com/564x/bf/d3/21/bfd321117f451c676b6f1ef5b55fd730.jpg" alt="">
-                    <div class="card-body">
-                    <h5 class="card-title">Minisode 1: Blue Hour</h5>
-                    <p class="card-text">$920.00 MXN</p>
-                    <div class="d-flex justify-content-between align-items-center"></div>
-                        <div class="btn-group">
-                            <a href="" class="btn btn-success">Al carrito</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+            if (!file_exists(__DIR__ . "/$imagen")) {
+                $imagen = "../imagenes/nofoto.jpg"; // Ruta a la imagen de "No disponible"
+            }
+            ?>
+            
+            <img src="<?php echo $imagen?>" alt="imagen del producto">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
+                    <p class="card-text">$<?php echo $row['precio']; ?> MXN</p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+                    <div class="btn-group">
+                        <form action="" method="post">
+                        <input type="text" name="id" id="id" value="<?php echo openssl_encrypt($row['id_productos'],COD,KEY); ?>">
+                        <input type="text" name="nombre" id="nombre" value="<?php echo openssl_encrypt($row['nombre'],COD,KEY); ?>">
+                        <input type="text" name="precio" id="precio" value="<?php echo openssl_encrypt($row['precio'],COD,KEY); ?>">
+                        <input type="number" name="cantidad" value="1" min="1">
 
-                <div class="col">
-                <div class="card shadow-sm">
-                    <img src="https://i.pinimg.com/736x/10/66/3a/10663abf32b130964df6f07c17744ee9.jpg" alt="">
-                    <div class="card-body">
-                    <h5 class="card-title">Minisode 3: TOMORROW</h5>
-                    <p class="card-text"> $780.00 MXN</p>
-                    <div class="d-flex justify-content-between align-items-center"></div>
-                        <div class="btn-group">
-                            <a href="" class="btn btn-success">Al carrito</a>
-                        </div>
-                    </div>
+                        <button class="btn btn-outline-primary"
+                             type="submit"
+                             value="agregar"
+                             name="btnAccion">Agregar al carrito</button> 
+
+
+                        </form>    
                     </div>
                 </div>
                 </div>
             </div>
+        <?php  }?>
+        </div>
+    </div>
 
-    </section>
+    <div class="alert alert-success" id="estadoCompra">
+        <?php echo ($mensaje)?>
+    </div>
+
+</section>     
 
     <footer>
         <section id="etiquetas">
@@ -126,5 +135,5 @@
         </section>
     </footer>
 </body>
-
+        
 </html>

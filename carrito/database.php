@@ -1,4 +1,8 @@
 <?php
+//encriptar la info de cada item de la tienda
+define ("KEY", "metztliunam");
+define ("COD", "AES-128-ECB");
+
 class Database {
 
     //las propiedades se cambian cuando se sube a un web host

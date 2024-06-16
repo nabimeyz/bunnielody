@@ -48,7 +48,7 @@
         <p>¡Explora el mundo del K-pop con nuestra tienda online, donde encontrarás los productos más populares de tus agrupaciones favoritas! Diseñada por una fan, pensada para fans como tú.</p>
     </article>
 
-    <div class="separacion"> <!--Seṕaración y título de sección-->
+    <div class="separacion">  <!--Seṕaración y título de sección-->
         <h2>Ingresa a a tienda Online</h2>
     </div>
 

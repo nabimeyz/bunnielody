@@ -30,7 +30,10 @@
     </div>
     <nav>
         <ul>
-             <h2 id="titlecarrito">Carrito</h2>
+                <a href="/bts/bts.php"><li>BTS</li></a>
+                <a href="/nj/newJeans.php"><li>NewJeans</li></a>
+                <a href="/txt/tubatu.php"><li>TXT</li></a>
+                <a href="/quienesSomos/quienesSomos.html"><li>Quienes Somos</li></a>
         </ul>
     </nav>
 </header>
@@ -38,8 +41,10 @@
 
 <!--Resumen del carrito-->
 <section id="resumen">
+<h2 id="titlecarrito">Carrito</h2>
+<p id="resumenP">Este es el resumen de tu compra:</p>
     <?php if (!empty($_SESSION['CARRITO'])){?>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-light">
         <tbody>
             <tr>
                 <th width="40%">Descripción</th>
@@ -55,13 +60,21 @@
                 <td width="15%"><?php echo intval($producto['CANTIDAD']); ?></td>
                 <td width="20%">$<?php echo number_format(floatval($producto['PRECIO']), 2); ?></td>
                 <td width="20%">$<?php echo number_format(floatval($producto['PRECIO']) * intval($producto['CANTIDAD']), 2); ?></td>
-                <td width="5%"><button class="btn btn-danger" type="button">Eliminar</button></td>
+                <td width="5%">
+                    <form action="" method="post">
+                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($producto['ID'],COD,KEY); ?>">
+                       <button 
+                       class="btn btn-danger"
+                       type="submit"
+                       name="btnAccion"
+                       value="eliminar">Eliminar</button>
+                    </form>
+                </td>
             </tr>
             <?php $total += floatval($producto['PRECIO']) * intval($producto['CANTIDAD']); ?>
             <?php } ?>
-
             <tr>
-                <td></td>
+                <td colspan="5"></td>
             </tr>
             <tr class="totalinfo">
                 <td></td>
@@ -71,6 +84,21 @@
             </tr>
         </tbody>
     </table>
+    
+    <section id="procesaCompra">
+    <form action="pagar.php" method="post">
+        <div class="alert alert-info">
+            <div class="form-group">
+            <p id="resumenP">Por favor, ingrese el correo de contacto a donde le haremos llegar la información de su pedido.</p>
+            <input id="email" name="email" class="form-control" type="email" placeholder="Ingrese un correo valido" required>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion" value="proceder" id="btnpago">Continúe con el pago</button>
+        <br>
+        <br>
+        <a href="/index.php#introduccion"> o puede regresar a la tienda</a>
+    </form>
+    </section>
 <?php } else {?>
 <div class="alert alert-success">
     No hay productos en el carrito
@@ -83,7 +111,7 @@
         <section id="etiquetas">
             <h4>Sitios de interés</h4> <br>
             <ul id="sitiosInteres">
-                <a href="/index.html"><li>Inicio</li></a>
+                <a href="/index.php"><li>Inicio</li></a>
                 <a href="/sobreMi/sobreMi.html"><li>¿Quién creó el sitio?</li></a>
                 <a href="/formContacto/formContacto.html"><li>Contáctanos</li></a>
                 <a href="/metodoPago/pago.html"><li>Métodos de pago</li></a>

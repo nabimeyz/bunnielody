@@ -17,12 +17,17 @@ main {
 #titlecarrito {
     font-size: 40px;
     font-weight: 600;
-    color: white;
-    text-align: center;
+    color: black;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#resumenP {
+    padding-bottom: 30px;
 }
 
 #resumen {
-    padding: 200px 30px 100px 30px;
+    padding: 200px 50px 70px 50px;
     font-family: 'Plus Jakarta Sans', sans-serif; 
 }
 
@@ -46,4 +51,26 @@ td{
 
 .table-bordered{
     border-color: black;
+}
+
+#btnpago {
+    background-color: burlywood;
+    border-color: black;
+    color: black;
+    font-size: 15px;
+}
+
+.alert {
+    background-color:rgb(228, 221, 212);
+    border-color: rgb(228, 221, 212);
+    color: black;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    font-weight: 600; 
 }
